@@ -29,3 +29,34 @@ cuandoPasa('seleccionarArtista', ({ id, cantidad, codigoDescuento }) => {
 });
 
 iniciar();
+
+function calcularTotal (id: string, cantidad: number, codigo: string): number {
+  let precioBase: number = 0;
+  if (id === "sabrina") {
+    precioBase = 1000
+  }
+  else if (id === "kgatlw") {
+    precioBase = 700
+  }
+  else if (id === "lali") {
+    precioBase = 500
+  }
+  else if (id === "magdalena") {
+    precioBase = 600
+  }
+  else if (id === "viagra") {
+    precioBase = 400
+  }
+  else if (id === "dillom") {
+    precioBase = 350
+  }
+  else if (id === "marilina") {
+    precioBase = 200
+  }
+  else if (id === "mugre") {
+    precioBase = 150
+  }
+  let precioTotal = precioBase * cantidad
+  if ()
+  return precioTotal
+}
