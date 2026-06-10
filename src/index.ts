@@ -56,7 +56,24 @@ function calcularTotal (id: string, cantidad: number, codigo: string): number {
   else if (id === "mugre") {
     precioBase = 150
   }
+  else {
+    precioBase = 0
+  }
+
   let precioTotal = precioBase * cantidad
-  if ()
-  return precioTotal
+  let precioDescontado: number = 0
+
+  if (codigo === "DARIO") {
+    precioDescontado = precioTotal * 0.5
+  }
+  else if (codigo === "TIC20") {
+    precioDescontado = precioTotal * 0.8
+  }
+  else if (codigo === "TIC10") {
+    precioDescontado = precioTotal * 0.9
+  }
+  else {
+    precioDescontado = precioTotal
+  }
+  return precioDescontado
 }
